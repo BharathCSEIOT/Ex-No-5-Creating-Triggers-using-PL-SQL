@@ -41,8 +41,8 @@ CREATE TABLE sal_log (
 ![image](https://github.com/BharathCSEIOT/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/122793480/e784d2f0-1b29-40c0-ac08-854fec0c3c3d)
 
 ### PLSQL Trigger code
+->create trigger 
 ```
-->Create the trigger
 Create the trigger
 CREATE OR REPLACE TRIGGER log_sal_update
 BEFORE UPDATE ON employed
@@ -54,16 +54,18 @@ BEGIN
   END IF;
 END;
 /
+```
 ->Update the salary of an employee
+```
 UPDATE employed
 SET salary = 60000
 WHERE empid = 1;
 ->Display the employee table
 SELECT * FROM employed;
-
+```
 ->Display the salary_log table
+```
 SELECT * FROM sal_log;
-
 ```
 ### Output:
 ![image](https://github.com/BharathCSEIOT/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/122793480/51e5e56e-b792-4612-88e7-235dde93af95)
