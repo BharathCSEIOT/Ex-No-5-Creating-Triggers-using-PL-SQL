@@ -17,13 +17,6 @@
 NAME: BHARATH K
 Reg.no: 212222110006
 ```
-```
-CREATE TABLE employed(
-  empid NUMBER,
-  empname VARCHAR2(10),
-  dept VARCHAR2(10),
-  salary NUMBER
-);
 
 CREATE TABLE sal_log (
   log_id NUMBER GENERATED ALWAYS AS IDENTITY,
@@ -33,12 +26,31 @@ CREATE TABLE sal_log (
   new_salary NUMBER,
   update_date DATE
 );
-```
-### Create employee table
-![image](https://github.com/BharathCSEIOT/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/122793480/f3e744fb-7606-46cb-8a75-89f67070a0f1)
 
-### Create salary_log table
-![image](https://github.com/BharathCSEIOT/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/122793480/e784d2f0-1b29-40c0-ac08-854fec0c3c3d)
+### Create employee table:
+
+```
+CREATE TABLE employed(
+  empid NUMBER,
+  empname VARCHAR2(10),
+  dept VARCHAR2(10),
+  salary NUMBER
+);
+```
+![image](https://github.com/BharathCSEIOT/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/122793480/d94325cf-a53d-43ed-a7d1-189012fc470d)
+
+### Create salary_log table:
+```
+CREATE TABLE sal_log (
+  log_id NUMBER GENERATED ALWAYS AS IDENTITY,
+  empid NUMBER,
+  empname VARCHAR2(10),
+  old_salary NUMBER,
+  new_salary NUMBER,
+  update_date DATE
+);
+```
+![image](https://github.com/BharathCSEIOT/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/122793480/980d51a9-32bc-4ced-af8a-9859983daf60)
 
 ### PLSQL Trigger code
 ->create trigger 
